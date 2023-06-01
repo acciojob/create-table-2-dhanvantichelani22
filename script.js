@@ -1,23 +1,22 @@
 function createTable() {
     //Write your code here
 	// Prompt for the number of rows
-  const numRows = parseInt(prompt("Input number of rows"));
+  const numRows = window.prompt("Input number of rows", 1);
 
   // Prompt for the number of columns
-  const numCols = parseInt(prompt("Input number of columns"));
-
-  // Get the table element
-  const table = document.getElementById('myTable');
+  const numCols = window.prompt("Input number of columns",1);
 
   // Clear the existing table
  // table.innerHTML = '';
 
   // Create the table rows and columns
-  for (let i = 0; i < numRows; i++) {
-    const row = table.insertRow();
-    for (let j = 0; j < numCols; j++) {
-      const cell = row.insertCell();
-      cell.textContent = `Row-${i} Column-${j}`;
+  for (let i = 0; i < parseInt(numRows,10); i++) {
+	  // Get the table element
+  
+const table = document.getElementById('myTable').insertRow(i);
+    for (let j = 0; j < parseInt(numCols,10); j++) {
+      const cell = table.insertCell(j);
+      cell.innerHTML = `Row-${i} Column-${j}`;
     }
   }
 }
