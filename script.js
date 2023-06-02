@@ -1,10 +1,12 @@
 function createTable() {
+	// Prompt for the number of rows & column
   const numRows = window.prompt("Input number of rows", 1);
   const numCols = window.prompt("Input number of columns", 1);
   
   const table = document.getElementById('myTable');
   table.innerHTML = ''; // Clear the table before creating a new one
 
+	// Create the table rows and columns
   for (let i = 0; i < parseInt(numRows, 10); i++) {
     const row = table.insertRow(i);
     for (let j = 0; j < parseInt(numCols, 10); j++) {
